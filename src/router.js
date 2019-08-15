@@ -1,6 +1,7 @@
-import Vue from 'vue';
-import Home from './components/Home.vue';
-import { IonicVueRouter } from '@ionic/vue';
+import Vue                  from 'vue';
+import Home                 from './components/Home.vue';
+import Login                from './components/Login.vue';
+import { IonicVueRouter }   from '@ionic/vue';
 
 Vue.use(IonicVueRouter);
 
@@ -9,15 +10,14 @@ export default new IonicVueRouter({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path        : '/',
+      name        : 'home',
+      component   : Home
     },
     {
-      path: '/login',
-      name: 'login',
-      component: () =>
-        import(/* webpackChunkName: "login" */ './components/Login.vue')
+      path        : '/login',
+      name        : 'login',
+      component   : Login
     }
   ]
 });

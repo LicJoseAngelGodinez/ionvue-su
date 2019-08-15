@@ -8,8 +8,10 @@ import '@ionic/core/css/ionic.bundle.css';
 
 Vue.use(Ionic);
 Vue.config.productionTip = false;
+Vue.config.ignoredElements = [/^ion-/];
 
 new Vue({
+  el: '#app',
   router,
   render: h => h(App)
-}).$mount('#app');
+});
