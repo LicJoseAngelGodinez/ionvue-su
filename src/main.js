@@ -1,22 +1,12 @@
 import Vue from 'vue';
 import App from './App.vue';
-import VueRouter from 'vue-router';
+import router from './router';
 
-import routes from './routes';
+import Ionic from '@ionic/vue';
+import '@ionic/core/css/ionic.bundle.css';
 
-// export const router = new VueRouter({
-  //   base: '/',
-//   mode: 'history',
-//   routes: [
-  //     { path: '/path', component: component }
-//   }
-// });
-
-Vue.config.productionTip = false
-
-Vue.use(VueRouter);
-
-const router = new VueRouter({routes});
+Vue.use(Ionic);
+Vue.config.productionTip = false;
 
 new Vue({
   router,
